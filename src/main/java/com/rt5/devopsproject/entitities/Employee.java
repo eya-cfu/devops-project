@@ -1,3 +1,4 @@
+package com.rt5.devopsproject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
