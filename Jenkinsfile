@@ -28,10 +28,16 @@ pipeline {
                 sh "mvn verify sonar:sonar -Dsonar.login=1556bd29928aa0a5425e292317edc770a50b7b5b"
             }
         }
+        stage('Maven Install') {
+            steps {
+                sh "mvn clean install -Dmaven.test.skip=true"
+            }
+        }
         stage('Nexus Deploy') {
             steps {
                 sh "mvn clean deploy -Dmaven.test.skip=true"
             }
         }
+
     }
 }
