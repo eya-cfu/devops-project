@@ -1,0 +1,5 @@
+This is a project for DevOps class.
+
+We create a SpringBoot basic program with 6 ORM entities and deploy it through a Jenkins Pipeline.
+
+The pipline fetches the source code from this github repository, compiles and package it with maven. Unit tests are run with JUnit. We also run a SonarQube quality analysis. We finally deploy the jar file to Nexus.
